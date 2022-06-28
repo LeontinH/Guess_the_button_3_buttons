@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <body style = "text-align:center;">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+  </head>
+
+  <body>
+    <h1>Hello, please choose a button and press it!</h1>
+
+    <div class="btn-group" role="group" aria-label="Basic example">
+      <button type="button" class="btn btn-secondary" id="1" onClick="reply_click(id)">Left</button>
+    </div>
+      <button type="button" class="btn btn-secondary" id="2" onClick="reply_click(id)">Middle</button>
+      <button type="button" class="btn btn-secondary" id="3" onClick="reply_click(id)">Right</button>
+    </div>
+
+    <p id = "My_Style" style = "color:blueviolet; font-size: 40px; font-weight: bold;"></p>     
+
+    <script type="text/javascript">
+      let u = Math.floor((Math.random() * 3) + 1);
+      function reply_click(clicked_id) {
+        if (u == clicked_id) {
+          document.getElementById("My_Style").innerHTML = "Congratulations! <br>You've chosen the winning button!";
+        } else {
+            document.getElementById("My_Style").innerHTML = "Sorry! <br>You didn't choose the winning button!";
+        }
+      }
+    </script>
+  </body>
+</html>
